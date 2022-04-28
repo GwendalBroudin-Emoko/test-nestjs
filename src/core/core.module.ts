@@ -1,7 +1,10 @@
 import { Global, Module } from '@nestjs/common';
 
 @Global()
-@Module({providers: [
-  
-]})
-export class CoreModule {}
+@Module({
+  providers: [
+
+  ], 
+  controllers: []
+})
+export class CoreModule { }

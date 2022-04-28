@@ -4,16 +4,6 @@
   "compilerOptions": {
     "plugins": [
       {
-        "name": "@nestjs/graphql",
-        "options": {
-          "typeFileNameSuffix": [
-            ".entity.ts",
-            ".model.ts"
-          ],
-          "introspectComments": true
-        }
-      },
-      {
         "name": "@nestjs/swagger",
         "options": {
           "classValidatorShim": false,

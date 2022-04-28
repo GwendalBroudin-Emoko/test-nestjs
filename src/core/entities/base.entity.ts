@@ -1,4 +1,5 @@
 import { prop, modelOptions } from "@typegoose/typegoose";
+import { randomUUID } from "crypto";
 
 @modelOptions({
   schemaOptions: {
@@ -6,10 +7,9 @@ import { prop, modelOptions } from "@typegoose/typegoose";
     toObject: { virtuals: true }
   }
 })
-export class BaseEntity  {
-  // @prop()
+export class BaseEntity {
   public id!: string;
-  @prop()
+  @prop({ default: randomUUID, _id: true })
   _id!: string;
 }
 

@@ -1,12 +1,13 @@
 import { Module } from '@nestjs/common';
-import { databaseProviders } from './providers/database.providers';
+import { TypegooseModule } from 'nestjs-typegoose';
 
 @Module({
   imports:[
-    ...databaseProviders,
+    TypegooseModule.forRoot("mongodb://localhost:27017/", {
+      dbName: 'emoko-api-dev',
+    }),
   ],
   exports: [
-    ...databaseProviders,
   ],
 })
 export class DatabaseModule { }
